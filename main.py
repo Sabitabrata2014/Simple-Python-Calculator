@@ -31,3 +31,37 @@ def add():
 b1 = Button(window, text="Add",command=add)
 b1.place(x=50,y=200)
 
+def sub():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  sub = num1 - num2
+  t3.insert(END,str(sub))
+
+b2 = Button(window, text="Subtract",command=sub)
+b2.place(x=120,y=200)
+
+def mul():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  product = num1 * num2
+  t3.insert(END,str(product))
+
+b3 = Button(window, text="Multiply",command=mul)
+b3.place(x=220,y=200)
+
+def div():
+  num1=int(t1.get())
+  num2=int(t2.get())
+  quotient = num1 / num2
+  t3.insert(END,str(quotient))
+
+b4 = Button(window, text="Divide",command=div)
+b4.place(x=320,y=200)
+
+def clear():
+  t1.delete(0,END)
+  t2.delete(0,END)
+  t3.delete(0,END)
+
+b5 = Button(window, text="Clear",command=clear)
+b5.place(x=180,y=250)
